@@ -1,0 +1,34 @@
+@import '../themes/_dark.scss';
+$prefix: 'fl-';
+
+/**
+* Gutters
+*/
+$gutter: 20px;
+
+/*
+* Typography
+*/
+$font-size-base: 14px !default;
+$font-size-title-1: 2.2em;
+$font-size-title-2: 2em;
+$font-size-title-3: 1.8em;
+$font-size-title-4: 1.6em;
+$font-size-title-5: 1.4em;
+$font-size-title-6: 1.2em;
+$font-font-family: 'Open Sans', sans-serif;
+
+$font-color-base: $theme-fluent-base-dark;
+$font-color-light: $theme-fluent-base-light;
+
+/*
+* Buttons & Input
+*/
+$button-color-primary: $theme-fluent-button-primary;
+$button-color-primary-accent1: $theme-fluent-button-primary-accent1;
+
+/*
+* Navigation
+*/
+$nav-color-background-primary: $theme-fluent-base-dark;
+$nav-color-foreground-primary: $theme-fluent-base-light;

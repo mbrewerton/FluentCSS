@@ -1,0 +1,16 @@
+@import '../core/_variables.scss';
+
+nav, .nav {
+    @extend .#{$prefix}flex-row;
+    height: 40px;
+    background: 
+
+    ul, ol {
+        height: 100%;
+        display: flex;
+        @extend .#{$prefix}flex-start-center;
+    }
+
+    .#{$prefix}nav-item {
+    }
+}

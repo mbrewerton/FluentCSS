@@ -1,0 +1,49 @@
+$lst-padding-margin-sizes: "padding" 0, "padding" 5, "padding" 10, "padding" 15, "padding" 20, "padding" 25, "margin" 0, "margin" 5, "margin" 10, "margin" 15, "margin" 20, "margin" 25;
+
+@mixin CreatePaddingMarginClass($class, $size) {
+    .#{$class + '-' + $size} {
+        #{$class}: $size + px;
+    }
+
+    .#{$class + '-top-' + $size} {
+        #{$class + '-top'}: $size + px;
+    }
+
+    .#{$class + '-right-' + $size} {
+        #{$class + '-right'}: $size + px;
+    }
+
+    .#{$class + '-bottom-' + $size} {
+        #{$class + '-bottom'}: $size + px;
+    }
+
+    .#{$class + '-left-' + $size} {
+        #{$class + '-left'}: $size + px;
+    }
+
+
+    .#{$class + '-' + $size + '-i'} {
+        #{$class}: $size + px !important;
+    }
+
+    .#{$class + '-top-' + $size + '-i'} {
+        #{$class + '-top'}: $size + px !important;
+    }
+
+    .#{$class + '-right-' + $size + '-i'} {
+        #{$class + '-right'}: $size + px !important;
+    }
+
+    .#{$class + '-bottom-' + $size + '-i'} {
+        #{$class + '-bottom'}: $size + px !important;
+    }
+
+    .#{$class + '-left-' + $size + '-i'} {
+        #{$class + '-left'}: $size + px !important;
+    }
+}
+
+@each $size in $lst-padding-margin-sizes {
+    $class: nth($size, 1);
+    @include CreatePaddingMarginClass($class, nth($size, 2));
+}

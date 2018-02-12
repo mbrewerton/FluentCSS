@@ -1,0 +1,68 @@
+@import '_variables.scss';
+
+$flex-directions: row, row-reverse, column, column-reverse;
+$flex-justify: start, end, center, space-between, space-around, space-evenly;
+
+@mixin FlexDirection($name) {
+    .#{$prefix}flex-#{$name} {
+        flex-direction: $name;
+    }
+}
+@mixin FlexJustify($name) {    
+    .#{$prefix}flex-#{$name} {
+        @extend .#{$prefix}flex;
+        justify-content: $name;
+    }
+}
+@mixin FlexAlign($name) {
+
+}
+
+// Convert to sass
+// .#{$prefix}flex-start-start {
+//     justify-content: flex-start;
+//     align-items: flex-start;
+// }
+// .#{$prefix}flex-start-end {
+//     justify-content: flex-start;
+//     align-items: flex-end;
+// }
+// .#{$prefix}flex-end-end {
+//     justify-content: flex-end;
+//     align-items: flex-end;
+// }
+.#{$prefix}flex-start-center {
+    justify-content: flex-start;
+    align-items: center;
+}
+// .#{$prefix}flex-center-center {
+//     justify-content: center;
+//     align-items: center;
+// }
+
+
+body, div, span, p {
+    box-sizing: border-box;
+}
+
+.#{$prefix}flex {
+    display: flex;
+}
+
+.#{$prefix}padding {
+    padding: $gutter;
+}
+
+.#{$prefix}margin {
+    margin: $gutter;
+}
+
+@mixin SetupLayout() {
+    @each $flexDir in $flex-directions {
+        @include FlexDirection(($flexDir));
+    }
+    @each $flexJustify in $flex-justify {
+        @include FlexJustify($flexJustify);
+    }
+}
+@include SetupLayout();
