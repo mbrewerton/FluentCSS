@@ -24,5 +24,8 @@ This will align your items at the start on the X axis, and centered on the Y axi
 # Can I modify the classes?
 Short answer: Of course! Longer answer: Yes you can as it's build using Sass. You are free to modify the Sass files in any way you see fit. However, as it is built using Sass, you will need a preprocessor such as [Prepros](https://prepros.io/), unless you feel like a bit of a sadist and fancy sifting through the compiled css.
 
-## Can I Change the Class Prefix?
+### Can I Change the Class Prefix?
 Yes. In the `_variables.scss` file there is a `$prefix` variable. This is prefixed to all classes. By default the prefix is `fl-` but this can be anything you like.
+
+### Can I theme the CSs?
+Definitely. There is a themes folder with some prebuilt themes, defaulting to the "dark" theme. Simply copy one of the themes, modify the variables to your requirements and edit the `_variables.scss` file and change the imported theme file. Everything should fall into place.
