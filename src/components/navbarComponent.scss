@@ -1,9 +1,25 @@
 @import '../core/_variables.scss';
 
+@mixin NavbarNavItemGloss($position) {
+    @if $position = 'top' {
+        box-shadow: inset 0px 5px 8px -5px rgba(255, 255, 255, 1);
+    } @else if $position = 'bottom' {
+        box-shadow: inset 0px -5 8px -5px rgba(255, 255, 255, 1);        
+    }
+}
+
 nav, .nav {
     @extend .#{$prefix}flex-row;
-    height: 40px;
-    background: 
+    height: $navbar-height;
+    background-color: $navbar-color-primary;
+    margin-bottom: $gutter;
+    box-shadow: $shadow-3;
+    z-index: $z-navbar;
+
+    &.fl-fixed {
+        position: fixed;
+        top: 0;
+    }
 
     ul, ol {
         height: 100%;
@@ -12,5 +28,37 @@ nav, .nav {
     }
 
     .#{$prefix}nav-item {
+        @extend .pointer;
+        line-height: $navbar-height;
+        color: $navbar-color-secondary;
+        padding: 0 $navbar-nav-item-gutter;
+        z-index: $z-navbar-nav-item;
+        position: relative;
+
+        &:before, &:after {
+            display: none;
+            content: '';
+            height: 5px;
+            width: 100%;
+            // background-color: white;
+            position: absolute;
+            left: 0;
+        }
+
+        &:hover {
+            &:before, &:after {                
+                display: block;
+            }
+
+            &:before {
+                top: 0;
+                @include NavbarNavItemGloss('top');
+            }
+
+            &:after {
+                bottom: 0;
+                @include NavbarNavItemGloss('bottom');
+            }
+        }
     }
 }

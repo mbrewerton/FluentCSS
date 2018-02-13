@@ -44,5 +44,7 @@ $button-color-primary-accent1: $theme-fluent-button-primary-accent1;
 /*
 * Navigation
 */
-$nav-color-background-primary: $theme-fluent-base-dark;
-$nav-color-foreground-primary: $theme-fluent-base-light;
+$navbar-nav-item-gutter: 20px;
+$navbar-height: 60px;
+$navbar-color-primary: $theme-fluent-base-dark;
+$navbar-color-secondary: $theme-fluent-base-light;
