@@ -47,3 +47,7 @@ $lst-padding-margin-sizes: "padding" 0, "padding" 5, "padding" 10, "padding" 15,
     $class: nth($size, 1);
     @include CreatePaddingMarginClass($class, nth($size, 2));
 }
+
+.pointer {
+    cursor: pointer;
+}
