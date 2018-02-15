@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 $lst-padding-margin-sizes: "padding" 0, "padding" 5, "padding" 10, "padding" 15, "padding" 20, "padding" 25, "margin" 0, "margin" 5, "margin" 10, "margin" 15, "margin" 20, "margin" 25;
 
 @mixin CreatePaddingMarginClass($class, $size) {
@@ -43,6 +45,14 @@ $lst-padding-margin-sizes: "padding" 0, "padding" 5, "padding" 10, "padding" 15,
     }
 }
 
+@mixin Transition($property, $speed, $animType) {
+    -moz-transition: $property $speed $animType;
+    -ms-transition: $property $speed $animType;
+    -o-transition: $property $speed $animType;
+    -webkit-transition: $property $speed $animType;
+    transition: $property $speed $animType;
+}
+
 @each $size in $lst-padding-margin-sizes {
     $class: nth($size, 1);
     @include CreatePaddingMarginClass($class, nth($size, 2));
@@ -50,4 +60,8 @@ $lst-padding-margin-sizes: "padding" 0, "padding" 5, "padding" 10, "padding" 15,
 
 .pointer {
     cursor: pointer;
+}
+
+.#{$prefix}transition {
+    @include Transition(all, .1s, ease-in-out);
 }

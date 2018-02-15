@@ -1,0 +1,39 @@
+@import '../../core/_variables.scss';
+
+#{$button-selector} {
+    background-color: white;
+    border: none;
+    padding: $button-padding $button-padding * 2;
+    border-radius: 2px;
+    box-shadow: $shadow-1;
+
+    &:hover {
+        box-shadow: $shadow-2;
+    }
+
+    &:active {
+        // padding: $button-padding - 1 ($button-padding * 2) - 1;
+        box-shadow: $shadow-1;
+        font-size: .9em;
+    }
+
+    &.#{$prefix}primary {
+        background-color: $button-color-primary;
+        color: white;
+
+        &:hover {
+            background-color: $button-color-primary-accent1;
+        }
+    }
+    
+    &.#{$prefix}secondary {
+        
+    }
+    
+    &.#{$prefix}tertiary {
+        
+    }
+
+    @extend .pointer;
+    @extend .#{$prefix}transition;
+}

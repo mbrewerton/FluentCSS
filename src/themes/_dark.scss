@@ -4,8 +4,9 @@ $theme-fluent-primary-base: #44C444;
 $theme-fluent-primary-accent1: #61D661;
 $theme-fluent-secondary-base: #3E42BD;
 $theme-fluent-secondary-accent1: #696DDF;
+$theme-fluent-lighten: 5;
 
-$theme-fluent-button-primary: $theme-fluent-primary-base;
-$theme-fluent-button-primary-accent1: $theme-fluent-primary-accent1;
+$theme-fluent-button-primary: #1979CA;
+$theme-fluent-button-primary-accent1: lighten($theme-fluent-button-primary, $theme-fluent-lighten);
 $theme-fluent-button-secondary: $theme-fluent-secondary-base;
 $theme-fluent-button-secondary-accent1: $theme-fluent-secondary-accent1;

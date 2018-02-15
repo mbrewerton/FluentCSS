@@ -9,9 +9,9 @@ $gutter: 20px;
 /*
 * Box Shadows
 */
-$shadow-1: 0px 2px 3px -1px rgba(0, 0, 0, 0.5);
-$shadow-2: 0px 2px 8px -1px rgba(0, 0, 0, 0.75);
-$shadow-3: 0px 2px 12px -1px rgba(0, 0, 0, 1);
+$shadow-1: 0px 2px 3px -1px rgba(0, 0, 0, 0.1);
+$shadow-2: 0px 2px 8px -1px rgba(0, 0, 0, 0.2);
+$shadow-3: 0px 2px 12px -1px rgba(0, 0, 0, 0.3);
 
 /*
 * z-index
@@ -40,9 +40,15 @@ $font-color-secondary: $theme-fluent-base-light;
 */
 $button-color-primary: $theme-fluent-button-primary;
 $button-color-primary-accent1: $theme-fluent-button-primary-accent1;
+$button-padding: 10px;
 
 /*
 * Navigation
 */
 $nav-color-background-primary: $theme-fluent-base-dark;
 $nav-color-foreground-primary: $theme-fluent-base-light;
+
+/*
+* Selectors
+*/
+$button-selector: 'button, .' + $prefix + 'button';
