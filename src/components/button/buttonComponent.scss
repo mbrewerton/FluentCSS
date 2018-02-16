@@ -13,8 +13,9 @@
 
     &:active {
         // padding: $button-padding - 1 ($button-padding * 2) - 1;
-        box-shadow: $shadow-1;
-        font-size: .9em;
+        box-shadow: none;
+        padding: $button-padding - 1 ($button-padding * 2) - 1;
+        margin: 1px;
     }
 
     &.#{$prefix}primary {
@@ -25,15 +26,41 @@
             background-color: $button-color-primary-accent1;
         }
     }
+
+    &#{$danger-selector} {
+        background-color: $button-color-danger;
+        color: white;
+
+        &:hover { 
+            background-color: $button-color-danger-accent1;
+        }
+    }
     
     &.#{$prefix}secondary {
-        
-    }
-    
-    &.#{$prefix}tertiary {
-        
+        background-color: $button-color-secondary;
+        color: white;
+
+        &:hover {
+            background-color: $button-color-secondary-accent1;
+        }
     }
 
-    @extend .pointer;
+    @extend .#{$prefix}pointer;
     @extend .#{$prefix}transition;
+}
+
+#{$fab-selector} {
+    @extend #{$button-selector};
+    width: $fab-size;
+    height: $fab-size;
+    padding:0;
+    border-radius: 50%;
+
+    &:active {
+        $fab-margin: 1;
+        height: $fab-size - $fab-margin;
+        width: $fab-size - $fab-margin;
+        padding: 0;
+        margin: $fab-margin;
+    }
 }
