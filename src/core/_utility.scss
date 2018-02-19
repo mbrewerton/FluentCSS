@@ -63,5 +63,5 @@ $lst-padding-margin-sizes: "padding" 0, "padding" 5, "padding" 10, "padding" 15,
 }
 
 .#{$prefix}transition {
-    @include Transition(all, .1s, ease-in-out);
+    @include Transition(all, .1s, ease-in);
 }
