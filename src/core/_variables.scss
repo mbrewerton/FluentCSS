@@ -44,6 +44,8 @@ $button-color-secondary: $theme-fluent-button-secondary;
 $button-color-secondary-accent1: $theme-fluent-button-secondary-accent1;
 $button-color-danger: $theme-fluent-button-danger;
 $button-color-danger-accent1: $theme-fluent-button-danger-accent1;
+$button-color-success: $theme-fluent-button-success;
+$button-color-success-accent1: $theme-fluent-button-success-accent1;
 $button-padding: 10px;
 
 $fab-size: 40px;
@@ -59,4 +61,5 @@ $nav-color-foreground-primary: $theme-fluent-base-light;
 */
 $button-selector: 'button, .' + $prefix + 'button';
 $fab-selector: '.' + $prefix + 'button-fab, .' + $prefix + 'fab';
-$danger-selector: '.' + $prefix + 'danger, .' + $prefix + 'error'
+$danger-selector: '.' + $prefix + 'danger, .' + $prefix + 'error';
+$success-selector: '.' + $prefix + 'success';

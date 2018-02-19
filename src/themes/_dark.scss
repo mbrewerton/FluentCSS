@@ -1,8 +1,8 @@
-$theme-fluent-lighten: 5;
+$theme-fluent-lighten: 3;
 $theme-fluent-base-light: #F3F3F3;
 $theme-fluent-base-dark: #252525;
-$theme-fluent-primary-base: #44C444;
-$theme-fluent-primary-accent1: #61D661;
+$theme-fluent-success-base: #069908;
+$theme-fluent-success-accent1: lighten($theme-fluent-success-base, $theme-fluent-lighten);
 $theme-fluent-danger-base: #C23824;
 $theme-fluent-danger-base-accent1: lighten($theme-fluent-danger-base, $theme-fluent-lighten);
 
@@ -10,5 +10,7 @@ $theme-fluent-button-primary: #1979CA;
 $theme-fluent-button-primary-accent1: lighten($theme-fluent-button-primary, $theme-fluent-lighten);
 $theme-fluent-button-secondary: #f5c644;
 $theme-fluent-button-secondary-accent1: lighten($theme-fluent-button-secondary, $theme-fluent-lighten);
+$theme-fluent-button-success: $theme-fluent-success-base;
+$theme-fluent-button-success-accent1: $theme-fluent-success-accent1;
 $theme-fluent-button-danger: $theme-fluent-danger-base;
 $theme-fluent-button-danger-accent1: $theme-fluent-danger-base-accent1;

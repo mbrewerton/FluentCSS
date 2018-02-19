@@ -45,6 +45,15 @@
         }
     }
 
+    &#{$success-selector} {
+        background-color: $button-color-success;
+        color: white;
+
+        &:hover {
+            background-color: $button-color-success-accent1;
+        }
+    }
+
     @extend .#{$prefix}pointer;
     @extend .#{$prefix}transition;
 }
