@@ -1,0 +1,32 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="what-is-fluent-css-">What is Fluent CSS?</h1>
+<p>Fluent CSS is a CSS framework based on Microsoft&#39;s Fluent Design (<a href="https://fluent.microsoft.com/">https://fluent.microsoft.com/</a>) to provide a compelling user interface that is extremely simple to use and modify.</p>
+<p>I am currently working on a full API doc to go along with the framework.</p>
+<p>Fluent CSS uses prefixed Flexbox and provides support for:</p>
+<ul>
+<li>Chrome 21+</li>
+<li>Safari 6.1+</li>
+<li>Firefox 22+</li>
+<li>Opera 12.1+</li>
+<li>IE10+</li>
+</ul>
+<h1 id="how-do-i-use-fluent-css-">How do I use Fluent CSS?</h1>
+<p>Fluent CSS is extremely easy to use. The layout consists of a simple <code>.fl-flex</code> class that simply provides a <code>display: flex;</code> to the container. Item alignment is done using alignment classes, for example:</p>
+<pre><code>&lt;div class=&quot;fl-start-center&quot;&gt;
+  &lt;!-- Content here --&gt;
+&lt;/div&gt;
+</code></pre><p>This will align your items at the start on the X axis, and centered on the Y axis. The alignment classes are <code>&lt;prefix&gt;-flex-&lt;x&gt;-&lt;y?&gt;</code> where y is optional. eg <code>.fl-flex-start</code> will align items to the start for both the X and the Y axis.</p>
+<h1 id="can-i-modify-the-classes-">Can I modify the classes?</h1>
+<p>Short answer: Of course! Longer answer: Yes you can as it&#39;s build using Sass. You are free to modify the Sass files in any way you see fit. However, as it is built using Sass, you will need a preprocessor such as <a href="https://prepros.io/">Prepros</a>, unless you feel like a bit of a sadist and fancy sifting through the compiled css.</p>
+<h3 id="can-i-change-the-class-prefix-">Can I Change the Class Prefix?</h3>
+<p>Yes. In the <code>_variables.scss</code> file there is a <code>$prefix</code> variable. This is prefixed to all classes. By default the prefix is <code>fl-</code> but this can be anything you like.</p>
+<h3 id="can-i-theme-the-css-">Can I theme the CSs?</h3>
+<p>Definitely. There is a themes folder with some prebuilt themes, defaulting to the &quot;dark&quot; theme. Simply copy one of the themes, modify the variables to your requirements and edit the <code>_variables.scss</code> file and change the imported theme file. Everything should fall into place.</p>
+
+      </body>
+    </html>
