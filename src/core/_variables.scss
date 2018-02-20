@@ -9,9 +9,9 @@ $gutter: 20px;
 /*
 * Box Shadows
 */
-$shadow-1: 0px 2px 3px -1px rgba(0, 0, 0, 0.5);
-$shadow-2: 0px 2px 8px -1px rgba(0, 0, 0, 0.75);
-$shadow-3: 0px 2px 12px -1px rgba(0, 0, 0, 1);
+$shadow-1: 0px 2px 3px -1px rgba(0, 0, 0, 0.1);
+$shadow-2: 0px 2px 8px -1px rgba(0, 0, 0, 0.2);
+$shadow-3: 0px 2px 12px -1px rgba(0, 0, 0, 0.3);
 
 /*
 * z-index
@@ -40,9 +40,26 @@ $font-color-secondary: $theme-fluent-base-light;
 */
 $button-color-primary: $theme-fluent-button-primary;
 $button-color-primary-accent1: $theme-fluent-button-primary-accent1;
+$button-color-secondary: $theme-fluent-button-secondary;
+$button-color-secondary-accent1: $theme-fluent-button-secondary-accent1;
+$button-color-danger: $theme-fluent-button-danger;
+$button-color-danger-accent1: $theme-fluent-button-danger-accent1;
+$button-color-success: $theme-fluent-button-success;
+$button-color-success-accent1: $theme-fluent-button-success-accent1;
+$button-padding: 10px;
+
+$fab-size: 40px;
 
 /*
 * Navigation
 */
 $nav-color-background-primary: $theme-fluent-base-dark;
 $nav-color-foreground-primary: $theme-fluent-base-light;
+
+/*
+* Selectors
+*/
+$button-selector: 'button, .' + $prefix + 'button';
+$fab-selector: '.' + $prefix + 'button-fab, .' + $prefix + 'fab';
+$danger-selector: '.' + $prefix + 'danger, .' + $prefix + 'error';
+$success-selector: '.' + $prefix + 'success';
